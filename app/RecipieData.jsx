@@ -32,7 +32,7 @@ const RecipieData = () => {
       setLoading(false);
       setData(res?.data.recipes);
     } catch (error) {
-      console.log("get data");
+      // console.log("get data");
     }
   };
 
@@ -43,31 +43,35 @@ const RecipieData = () => {
   return (
     <>
       <div className="p-5 m-auto">
-        <h1 className="text-center text-4xl font-bold">Our Top Recipes</h1>
+        <h1 className="text-xl lg:text-7xl md:text-5xl sm:text-3xl text-center">
+          Our Top Recipes
+        </h1>
         {/* <Link href="/"> */}
         {/* <button className="btn btn-neutral">Go Back Home</button> */}
         {/* </Link> */}
         {Loading ? (
-          <div className="mt-5 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
-            {Array.from({ length: 8 }).map((_, index) => {
+          <div className="mt-5 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4 justify-items-center">
+            {Array.from({ length: 4 }).map((_, index) => {
               return (
-                <div className="m-5 p-5">
-                  <div className="skeleton w-52 h-32 my-4"></div>
-                  <div className="skeleton h-2 w-32 my-4"></div>
-                  <div className="skeleton h-2 w-48 my-4"></div>
-                  <div className="skeleton h-2 w-48 my-4"></div>
+                <div className="m-5 p-5 grid">
+                  <div className="skeleton w-64 h-52 my-9 "></div>
+                  <div className="skeleton h-6 w-32 my-2"></div>
+                  <div className="skeleton h-3 w-68 my-2"></div>
+                  <div className="skeleton h-3 w-68 my-2"></div>
+                  <div className="skeleton h-3 w-68 my-2"></div>
+                  <div className="skeleton h-12 justify-self-end rounded-md w-24 my-2"></div>
                 </div>
               );
             })}
           </div>
         ) : (
-          <div className="m-auto grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-3 justify-center mt-9">
-            {data.map((res) => {
+          <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-3 justify-items-center mt-9 bg-green-50">
+            {data.slice(8, 12).map((res) => {
               return (
                 <>
                   <div className="card w-72 shadow-xl glass my-5">
                     {/* <Link href={`/user/${index + 1}`}> */}
-                    <figure>
+                    <figure className="rounded-b-full shadow-lg border-b-4 border-green-300">
                       <Image
                         src={res.image}
                         width={300}
@@ -77,9 +81,23 @@ const RecipieData = () => {
                     </figure>
                     <div className="card-body">
                       <h2 className="card-title">{res.name}</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
-                      <div className="card-actions justify-end">
-                        <button className="btn btn-neutral">Buy Now</button>
+                      <div className="flex justify-between my-5">
+                        <span className="badge bg-red-200 text-red-700">
+                          {res.cuisine}
+                        </span>
+                        <div className="rating">
+                          {res.rating}
+                          <input
+                            type="radio"
+                            name="rating-2"
+                            className="mask mask-star-2 bg-yellow-300 mx-2"
+                          />
+                        </div>
+                      </div>
+                      <div className="card-actions">
+                        <button className="btn bg-green-500 hover:bg-transparent hover:text-green-500 hover:border-green-500 text-white w-full">
+                          Try Now
+                        </button>
                       </div>
                     </div>
                     {/* </Link> */}

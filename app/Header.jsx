@@ -3,9 +3,12 @@ import React from "react";
 const Header = () => {
   return (
     <>
-      <div className="navbar bg-white">
+      <div className="navbar bg-green-50">
         <div className="navbar-start">
-          <a href="" className="btn btn-ghost text-xl text-green-500">
+          <a
+            href=""
+            className="ml-6 font-bold text-2xl text-green-500 hover:text-green-600 duration-300"
+          >
             Bhukkad
           </a>
         </div>
@@ -56,7 +59,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <hr className="mx-5" />
+      {/* <hr className="mx-5" /> */}
     </>
   );
 };

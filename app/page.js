@@ -1,11 +1,12 @@
 import Image from "next/image";
 import RecipieData from "./RecipieData";
 import Marquee from "react-fast-marquee";
+import heroImage from "./heroImage.png";
 
 export default function Home() {
   return (
     <>
-      <div className="ml-6 mt-6">
+      {/* <div className="ml-6 mt-6">
         <p className="">
           <span className="bg-green-500 rounded-l-lg p-[13px] text-lg text-white">
             Eat Healthy
@@ -14,12 +15,15 @@ export default function Home() {
             Stay Healthy
           </span>
         </p>
-      </div>
-      <div className="hero min-h-screen  bg-white">
+      </div> */}
+      <div className="hero min-h-screen bg-gradient-to-b from-green-50 to-green-200">
         <div className="hero-content flex-col lg:flex-row-reverse">
-          <img
-            src="https://www.southernliving.com/thmb/3x3cJaiOvQ8-3YxtMQX0vvh1hQw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/2652401_QFSSL_SupremePizza_00072-d910a935ba7d448e8c7545a963ed7101.jpg"
-            className="lg:w-2/5 xl:w-2/5 md:w-3/5 w-full rounded-lg shadow-2xl"
+          <Image
+            src={heroImage}
+            width={500}
+            height={500}
+            alt="image"
+            className="lg:w-1/2 xl:w-2/5 md:w-3/5 w-full rounded-lg "
           />
           <div>
             <h1 className="text-5xl font-bold">
@@ -43,19 +47,17 @@ export default function Home() {
           Testimonials
         </p>
         <Marquee speed={80} autoFill={true} pauseOnHover={true}>
-          <div className="card lg:w-96 md:w-80 w-74 bg-base-100 shadow-xl border-l-4 border-green-500 m-6 ">
+          <div className="card lg:w-96 md:w-80 w-74 bg-base-100 shadow-xl border-l-4 border-green-500 m-6 bg-gradient-to-l hover:from-green-50 hover:to-green-200">
             <div className="card-body">
               <h2 className="card-title text-green-500">Simply amazing!</h2>
               <p>
                 "This recipe elevated my cooking game to a whole new level.
                 Highly recommended!" - <strong>Sarah</strong>
               </p>
-              <div className="card-actions justify-end">
-                {/* <button className="btn bg-green-500  text-white">Buy Now</button> */}
-              </div>
+              <div className="card-actions justify-end"></div>
             </div>
           </div>
-          <div className="card lg:w-96 md:w-80 w-74 bg-base-100 shadow-xl border-l-4 border-green-500 m-6">
+          <div className="card lg:w-96 md:w-80 w-74 bg-base-100 shadow-xl border-l-4 border-green-500 m-6 bg-gradient-to-l hover:from-green-50 hover:to-green-200">
             <div className="card-body">
               <h2 className="card-title text-green-500">
                 Deliciously easy to follow!{" "}
@@ -64,12 +66,10 @@ export default function Home() {
                 "My family loved every bite. This recipe is now a weekly
                 favorite." - <strong> Mark</strong>
               </p>
-              <div className="card-actions justify-end">
-                {/* <button className="btn bg-green-500  text-white">Buy Now</button> */}
-              </div>
+              <div className="card-actions justify-end"></div>
             </div>
           </div>
-          <div className="card lg:w-96 md:w-80 w-74 bg-base-100 shadow-xl border-l-4 border-green-500 m-6">
+          <div className="card lg:w-96 md:w-80 w-74 bg-base-100 shadow-xl border-l-4 border-green-500 m-6 bg-gradient-to-l hover:from-green-50 hover:to-green-200">
             <div className="card-body">
               <h2 className="card-title text-green-500">
                 Perfectly balanced and incredibly tasty!
@@ -78,9 +78,7 @@ export default function Home() {
                 " This recipe exceeded all expectations. A must-try for
                 foodies!" -<strong> Alex</strong>
               </p>
-              <div className="card-actions justify-end">
-                {/* <button className="btn bg-green-500  text-white">Buy Now</button> */}
-              </div>
+              <div className="card-actions justify-end"></div>
             </div>
           </div>
         </Marquee>

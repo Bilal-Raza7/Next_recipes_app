@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
-const RecipieData = () => {
+const RecipieList = () => {
   const [data, setData] = useState([]);
   const [Loading, setLoading] = useState(true);
   const getData = async () => {
@@ -24,14 +24,14 @@ const RecipieData = () => {
 
   return (
     <>
-      <div className="p-5 m-auto">
+      <div className="p-5 m-auto ">
         <h1 className="text-xl lg:text-7xl md:text-5xl sm:text-3xl text-center">
-          Popular Recipes
+          Recipes You Love
         </h1>
 
         {Loading ? (
           <div className="mt-5 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4 justify-items-center">
-            {Array.from({ length: 4 }).map((_, index) => {
+            {Array.from({ length: 8 }).map((_, index) => {
               return (
                 <div key={index + 1} className="m-5 p-5 grid">
                   <div className="skeleton w-64 h-52 my-9 "></div>
@@ -45,8 +45,8 @@ const RecipieData = () => {
             })}
           </div>
         ) : (
-          <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-3 justify-items-center mt-9  bg-gradient-to-b from-white to-green-200 rounded-md">
-            {data.slice(7, 11).map((res) => {
+          <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-3 justify-items-center mt-9 bg-gradient-to-b from-white to-green-200">
+            {data.map((res) => {
               return (
                 <div className="card w-72 shadow-xl glass my-5" key={res.id}>
                   <figure className="rounded-b-full shadow-lg border-b-4 border-green-300">
@@ -73,7 +73,7 @@ const RecipieData = () => {
                       </div>
                     </div>
                     <div className="card-actions">
-                      <Link href={`recipes/${res.id}`}>
+                      <Link href={`/recipes/${res.id}`}>
                         <button className="btn bg-green-500 hover:bg-transparent hover:text-green-500 hover:border-green-500 text-white w-full">
                           Try Now
                         </button>
@@ -90,4 +90,4 @@ const RecipieData = () => {
   );
 };
 
-export default RecipieData;
+export default RecipieList;

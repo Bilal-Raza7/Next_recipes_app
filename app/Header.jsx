@@ -7,7 +7,7 @@ const Header = () => {
       <div className="navbar bg-green-50">
         <div className="navbar-start">
           <a
-            href=""
+            href={"/"}
             className="ml-6 font-bold text-2xl text-green-500 hover:text-green-600 duration-300"
           >
             Bhukkad

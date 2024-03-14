@@ -7,7 +7,7 @@ const Header = () => {
       <div className="navbar bg-green-50">
         <div className="navbar-start">
           <a
-            href={"/"}
+            href="/"
             className="ml-6 font-bold text-2xl text-green-500 hover:text-green-600 duration-300"
           >
             Bhukkad
@@ -16,13 +16,13 @@ const Header = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <Link href={"/"}>HOME</Link>
+              <Link href="/">HOME</Link>
             </li>
             <li>
-              <Link href={"/recipes"}>RECIPES</Link>
+              <Link href="/recipes">RECIPES</Link>
             </li>
             <li>
-              <Link href={"/about"}>ABOUT US</Link>
+              <Link href="/about">ABOUT US</Link>
             </li>
           </ul>
         </div>
@@ -60,7 +60,6 @@ const Header = () => {
           </div>
         </div>
       </div>
-      {/* <hr className="mx-5" /> */}
     </>
   );
 };

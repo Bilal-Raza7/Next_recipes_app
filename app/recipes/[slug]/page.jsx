@@ -4,7 +4,7 @@ import Image from "next/image";
 import { usePathname, useSearchParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
-const page = () => {
+const Page = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const pathname = usePathname();
@@ -51,4 +51,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

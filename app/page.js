@@ -50,9 +50,10 @@ export default function Home() {
           <div className="card lg:w-96 md:w-80 w-74 bg-base-100 shadow-xl border-l-4 border-green-500 m-6 bg-gradient-to-l hover:from-green-50 hover:to-green-200">
             <div className="card-body">
               <h2 className="card-title text-green-500">Simply amazing!</h2>
+
               <p>
-                "This recipe elevated my cooking game to a whole new level.
-                Highly recommended!" - <strong>Sarah</strong>
+                &quot;This recipe elevated my cooking game to a whole new level.
+                Highly recommended!&quot; -<strong>Sarah</strong>
               </p>
               <div className="card-actions justify-end"></div>
             </div>
@@ -63,9 +64,10 @@ export default function Home() {
                 Deliciously easy to follow!{" "}
               </h2>
               <p>
-                "My family loved every bite. This recipe is now a weekly
-                favorite." - <strong> Mark</strong>
+                &quot;My family loved every bite. This recipe is now a weekly
+                favorite&quot;-<strong> Mark</strong>
               </p>
+
               <div className="card-actions justify-end"></div>
             </div>
           </div>
@@ -75,8 +77,8 @@ export default function Home() {
                 Perfectly balanced and incredibly tasty!
               </h2>
               <p>
-                " This recipe exceeded all expectations. A must-try for
-                foodies!" -<strong> Alex</strong>
+                &quot;This recipe exceeded all expectations. A must-try for
+                foodies!&quot; -<strong> Alex</strong>
               </p>
               <div className="card-actions justify-end"></div>
             </div>
